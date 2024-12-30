@@ -8,23 +8,26 @@
 
 .actions {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 10px;
-  width: 100%; 
-  box-sizing: border-box; 
+  flex-wrap: nowrap; 
+  gap: 10px; 
 }
 
 .actions .button {
-  flex: 1 1 calc(33.333% - 10px); 
   text-align: center;
+  max-width: 200px; 
 }
 
 @media (max-width: 768px) {
+  .actions {
+      flex-direction: column;
+      align-items: center;
+  }
+
   .actions .button {
-      flex: 1 1 100%; 
+      width: 80%; /* Make the buttons take up most of the screen width */
+      max-width: none; /* Remove the width cap */
   }
 }
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
