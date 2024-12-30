@@ -9,18 +9,19 @@
 .actions {
   display: flex;
   flex-wrap: wrap; 
-  gap: 10px; 
+  gap: 10px;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .actions .button {
-  flex: 1 1 auto; 
-  max-width: 200px; 
+  flex: 1 1 calc(33.333% - 10px); 
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .actions {
-      flex-direction: column; 
-      gap: 15px;
+  .actions .button {
+      flex: 1 1 100%; 
   }
 }
 
